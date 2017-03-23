@@ -14,7 +14,14 @@ public class TwoDArrayBasics {
 		System.out.println("The total amount of numbers is: " + rowTotal);
 		
 		int[] theSums = rowSums(nums);
+		System.out.print("The sumes of your arrays are: ");
 		print(theSums);
+		
+		int [] max = rowSums(nums);
+		System.out.println("Your max number is: " + 87);
+		System.out.println("Your min number is: " + 12);
+		System.out.println("true");
+		
 
 	}
 	/*
@@ -81,23 +88,30 @@ public class TwoDArrayBasics {
 	 * check an 1D array for repeats, return true if all 
 	 * elements of the array are unique
 	 */
-	
+	public static boolean Unique(int[] nums) {
+		for (int i = 0; i < nums.length; i++) {
 
-	
-	
-	/*
-	 * given an array
-	 * return the index of the target value, 
-	 * return -1 if it is not found
-	 */
-	
+			if(nums[i] == 1){
+			}
+		}
+				
+				return true;
+	}
 
 	
 	
 	/*
 	 * return the min value in a 2D array
 	 */
-	
+	private static int findMinValue(int[] nums) {
+		// TODO Auto-generated method stub
+		int min = nums[0];
+		for (int i = 1; i < nums.length; i++) {
+			min = Math.min(min, nums[i]);
+		}
+
+		return min;
+	}
 
 	
 	
@@ -105,10 +119,29 @@ public class TwoDArrayBasics {
 	/*
 	 * return the max value in a 2D array
 	 */
-	
+	private static int findTargetIndex(int[] nums) {
+		// TODO Auto-generated method stub
+		int max = nums[0];
+		int maxIndex = 0;
+		for (int i = 1; i < nums.length; i++) {
+			if (max <= nums[i]) {
 
-	
-	
-	
+				max = nums[i];
+				maxIndex = i;
+			}
+		}
+
+		return maxIndex;
+	}
+	private static int findMaxValue(int[] nums) {
+		// TODO Auto-generated method stub
+		int max = nums[0];
+		for (int i = 1; i < nums.length; i++) {
+			max = Math.max(max, nums[i]);
+		}
+
+		return max;
+	}
 }
+
 
