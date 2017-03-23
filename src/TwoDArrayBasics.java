@@ -133,7 +133,7 @@ public class TwoDArrayBasics {
 
 		return maxIndex;
 	}
-	private static int findMaxValue(int[] nums) {
+	private static int findMaxValues(int[] nums) {
 		// TODO Auto-generated method stub
 		int max = nums[0];
 		for (int i = 1; i < nums.length; i++) {
